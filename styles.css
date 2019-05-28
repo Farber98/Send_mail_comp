@@ -1,0 +1,108 @@
+*{
+    padding: 0;    /* Quito el padding y margin de todos los elementos porque por defecto el navegador agrega espacios.*/
+    margin: 0;
+    -webkit-box-sizing: border-box; /*Agrego box sizing con valor border box. Esto sirve para especificar el contenedor y sus pixeles. */
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+
+}
+
+body    /*Le damos estilo al cuerpo de nuestra pagina. Caracteristicas generales*/
+{
+    background: #f2f2f2;    /*Fondo color blanco*/
+    font-size: 16px;        /*Tamaño de fuente 16 px.*/
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.wrap       /*Encerramos nuestro contenedor wrap y le damos estilo*/
+{
+    width: 90%;         /*Ancho*/
+    max-width: 500px;   /*Ancho maximo*/
+    margin: auto;        
+}
+
+form        /*Damos estilo a nuestro formulario.*/
+{
+    width: 100%;        /*Ancho*/
+    margin: 20px 0;     /*Margen arriba y abajo de 20 px*/
+    padding: 20px;      /*Padding interior de 20px*/
+    background: #fff;   /*Fondo blanco*/
+    overflow: hidden;       /*Sirve para el boton de submit. Arreglamos el problema del "float write"¿?*/
+    box-shadow: 0 0 3px grey;   /*Sombra de 3x de color gris.*/
+    border-top: 4px solid #536DFE;  /*Borde de 4 pixeles con ese color azulado.*/
+}
+
+form input[type="text"],   /*Definimos a los inputs que queremos acceder mediante los tipos.*/
+form input[type="email"],
+form input[type="password"],
+form textarea   /*Damos estilo al text area.*/
+{
+    border: 1px solid #536DFE;      /*Agrego borde*/
+    border-radius: 2px;                 /*Redondeo borde*/
+    padding: 16px;                  /*Agrego padding*/
+    width: 100%;                /*Ancho 100% para que inputs abarquen todo el ancho disponible*/
+    display: block;         
+    margin-bottom: 20px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;     /*Elijo fuente*/
+    font-size: 1em;             /*Elojo tamaño*/
+    color: #141938;             /*Elijo color*/
+}
+
+form input[type="text"]:focus,  /*Configuro que ocurre cuando le doy foco a cada caja.*/
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus
+{
+    border: 2px solid #3f51b5;      /*Al clickear se pondra un azul de otro tono.*/
+    padding: 15px;                  /*Bajo el apdding en un pixel para darle el efecto de clickeado. ¿?*/
+}
+
+form textarea       /*Configuro el text area para qque el usuario no pueda sobrepasarse de los limites establecidos.*/
+{
+    max-width: 100% ;
+    min-width: 100% ;
+    max-height: 300px ;
+    min-height: 150px ;
+}
+
+ .alert     /*Configuramos los mensajes de la clase alert general. Luego especifico cada uno mas abajo*/
+ {
+     padding: 1em;
+     color: #fff;           /*Al estar en blanco no se ve, debo agregar las especificaciones de abajo.*/
+     border-radius: 2px;
+     margin-bottom: 20px;
+     font-size: 14px;
+
+ }
+
+ .alert.error   /*Configuro en el caso de error. El color sera rojo, con un borde.*/
+ {
+    background: #F2DEDE;
+    border: 1px solid #a94442;
+    color: #a94442;
+
+ }
+
+
+ .alert.success     /*Configuro el caso de exito. El color sera verde.*/
+ {
+    background: #4caf50;
+ }
+
+ .boton     /*Configuro el boton accediendo a la clase boton.*/
+ {
+    padding: 15px;
+    background: #ED572A;
+    color: #E1E9FA;
+    font-size: 1em;      
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;     
+    border-radius: 2px;
+    border:none;
+    float:right;
+    cursor: pointer;        /*Esto hace que se ponga la manito cuando le pasemos por encima.*/
+ }
+
+form input[type="submit"]:hover     /*En vez de acceder por clase accedo por tipo de dato.*/
+{
+    background: #E64A19;        /*Lo que hacemos es que cuando no este seleccionado tenga otro tono*/
+}                                  /*Por ende al seleccionarlo habra un cambio de tonalidad*/
