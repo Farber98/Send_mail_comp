@@ -44,7 +44,7 @@ form textarea   /*Damos estilo al text area.*/
     display: block;         
     margin-bottom: 20px;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;     /*Elijo fuente*/
-    font-size: 1em;             /*Elojo tamaño*/
+    font-size: 1em;             /*Elijo tamaño*/
     color: #141938;             /*Elijo color*/
 }
 
